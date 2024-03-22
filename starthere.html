@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="My website.css">
+</head>
+<body>
+    <header class = "header">
+        <div class="logo" >Savory <span>Seasons</span></div>
+        
+        <div class="menu">
+            <div class="menu-strings"></div>
+            <div class="menu-strings"></div>
+            <div class="menu-strings"></div>
+        </div>
+
+            <div class="nav">
+                <a href="My website.html" id="active">Home</a>
+                <a href="Menu.html">Menu</a>
+                <a href="About.html">About Us</a>
+                <a href="Recipes.html">Recipes</a>
+                <a href="starthere.html">Start Here</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        
+    </header>
+
+        <title>Form with JavaScript</title>
+    <body>
+        <main class="start-main">
+            <div class = "p2">
+        </main>
+        <h2 class = "start-h2">
+            Mission Statement:</h2>
+            <p>At[Savory Seasons], our mission is to inspire and empower home cooks of all skill levels to get creative in the kitchen,
+            explore new flavors, and enjoy the pleasure of cooking and sharing meals with loved ones.<br> Whether you're a seasoned chef or a beginner
+            cook, you'll find plenty of mouthwatering recipes, cooking tips, and food adventures to fuel your culinary passion.
+        </p>
+        <p>
+            Sign up for our newsletter to receive exclusive content, cooking inspiration, and special offers delivered
+             straight to your inbox.<br> Don't miss out on our weekly recipe roundups and kitchen hacks!
+        </p>
+    </div>
+</main>
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" maxlength="20" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <label for="textarea">Particular Recipes you would like to see from us:</label>
+            <textarea id="textarea" name="textarea" rows="4" cols="50" required></textarea>
+            <br>
+            <label>Gender:</label>
+            <input type="radio" id="radio1" name="radio" value="option1">
+            <label for="radio1">Male</label>
+            <input type="radio" id="radio2" name="radio" value="option2">
+            <label for="radio2">Female
+
+            </label>
+            <br>
+            <label for="dropdown">Will you be interested in receiving updates on our blog:</label>
+            <select id="dropdown" name="dropdown">
+                <option value="option1">Yes</option>
+                <option value="option2">No</option>
+            </select>
+            <br>
+            <label for="file">File input:</label>
+            <input type="file" id="file" name="file" accept="image/*">
+            <br>
+            <input type="checkbox" id="checkbox" name="checkbox">
+            <label for="checkbox">Checkbox</label>
+            <br>
+            <input type="submit" value="Submit" onclick="validateForm()">
+        </form>
+    <p id="demo"></p>
+        <script>
+            // Validate form
+            function validateForm() {
+                const name = document.getElementById("name");
+                const email = document.getElementById("email");
+                if (name.value.length === 0) {
+                    alert("Please enter your name");
+                    name.style.border = "2px solid red";
+                    name.focus();
+                    return false;
+                }
+                if (name.value.length > 20) {
+                    alert("Name cannot be more than 20 characters");
+                    name.style.border = "2px solid red";
+                    name.focus();
+                    return false;
+                }
+                if (email.value.length === 0) {
+                    alert("Please enter your email");
+                    email.style.border = "2px solid red";
+                    email.focus();
+                    return false;
+                }
+                alert("Thank you for submitting your form!");
+                document.getElementById("demo").innerHTML = "Name: " + name.value;
+                return true;
+            }
+    
+            // Show text when checkbox is clicked
+            document.getElementById("checkbox").addEventListener("click", function() {
+                if (this.checked) {
+                    document.getElementById("demo").innerHTML = "That is amazing.";
+                }
+            });
+    
+            // Difference between confirm and prompt methods
+            // Confirm method creates a pop-up with a message and two buttons, "OK" and "Cancel"
+            // Prompt method creates a pop-up with a message, a text input, and two buttons, "OK" and "Cancel"
+            const confirmMessage = confirm("Do you want to click 'OK'?");
+            if (confirmMessage) {
+                console.log("You clicked 'OK'");
+            } else {
+                console.log("You clicked 'Cancel'");
+            }
+        </script>
+    </body>
+    </html>
+<footer>
+    <section class="footer">
+        <section class="top-footer">
+            <ul class="nav-links">
+                <li class="bold">PINCH OF YUM</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Recipe Index</li>
+                <li>Blogging Resources</li>
+                <li>Income Reports</li>
+                <li>Sponsored Content</li>
+                <li>Media Mentions</li>
+                <li>Contact</li>
+            </ul>
+            <ul class="footer-recipes">
+                <li class="bold">FOOD & RECIPES</li>
+                <li>Sugar Free January</li>
+                <li>Freezer Meals 101</li>
+                <li>Quick easy Recipes</li>
+                <li>Instant pot Recipes</li>
+                <li>Pasta Recipes</li>
+                <li>Vegan Recipes</li>
+                <li>Soup Recipes</li>
+                <li>Taco Recipes</li>
+                <li>Meal Prep Recipes </li>
+            </ul>
+            <div class="footer-signup">
+                <div class="newsletter">
+                    <h2>Signup for email updates</h2>
+                    <p>Get a Free eCookbook with our top 25 recipes</p>
+                    <form action="">
+                        <input type="text" placeholder="Name">
+                        <input type="email" name="" id="" placeholder="Email">
+                        <button type="button">GO</button>
+                    </form>
+                </div>
+                <div class="brands">
+                    <h3>OUR OTHER BRANDS</h3>
+                    <div class="brand-logos">
+                        <img src="food-blogger-pro-logo.png" alt="" class="food-blogger-logo">
+                        <img src="clariti-logo.svg" alt="" class="clariti-logo">
+                    </div>
+                </div>
+            </div>
+    </section>
+    </section>
+    
+        <!-- <p>&copy; 2024 Savory Seasons. All rights reserved.</p>       -->
+    </footer>
+    <script src="script.js"></script>
+    </body>
+</html>
